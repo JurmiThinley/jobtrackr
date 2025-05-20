@@ -30,7 +30,7 @@ def login():
     user = User.query.filter_by(username=username).first()
 
     if user is None or not user.check_password(password):
-        return jsonify({"msg": "Bad username or password"}), 401
+        return jsonify({"msg": "Wrong username or password"}), 401
 
-    access_token = create_access_token(identity=user.id)
+    access_token = create_access_token(identity=str(user.id))
     return jsonify(access_token=access_token), 200

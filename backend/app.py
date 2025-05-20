@@ -17,9 +17,15 @@ def create_app():
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     app.config['JWT_SECRET_KEY'] = os.getenv('JWT_SECRET_KEY', 'supersecretkey')
 
+    app.config['JWT_TOKEN_LOCATION'] = ['headers']
+    app.config['JWT_HEADER_NAME'] = 'Authorization'
+    app.config['JWT_HEADER_TYPE'] = 'Bearer'
+
+
     db.init_app(app)
     JWTManager(app)
-    CORS(app)
+    CORS(app, resources={r"/*": {"origins": "*"}}, expose_headers=["Authorization"])
+
 
     app.register_blueprint(auth_bp, url_prefix='/auth')
     app.register_blueprint(jobs_bp, url_prefix='/jobs')

@@ -1,0 +1,114 @@
+.container {
+  max-width: 600px;
+  margin: auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 20px;
+}
+
+input, select, textarea {
+  margin: 5px 0;
+  padding: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #f39c12;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+button:disabled {
+  background-color: #e0a850;
+  cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+  background-color: #d87f0a;
+}
+
+/* Form-level action buttons */
+.edit-btn {
+  background-color: #4caf50; /* green */
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #45a049;
+}
+
+.delete-btn {
+  background-color: #f44336; /* red */
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #c0392b;
+}
+
+.cancel-btn {
+  background-color: #777;
+  color: white;
+}
+
+.cancel-btn:hover {
+  background-color: #5c5c5c;
+}
+
+.job-action-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.edit-textarea {
+  width: 100%;
+  margin-top: 4px;
+}
+
+.jobs-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1em;
+}
+
+.jobs-table th,
+.jobs-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.jobs-table th {
+  background-color: #f4f4f4;
+  font-weight: 600;
+}
+
+.error {
+  color: #e74c3c;
+  background-color: #fdd;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+
+.message {
+  color: #27ae60;
+  background-color: #dfd;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+}
