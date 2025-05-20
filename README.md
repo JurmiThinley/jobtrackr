@@ -46,14 +46,11 @@ pip install -r requirements.txt
 python app.py
 ```
 The API will be available at http://localhost:5000/.
- ```bash
 
-```
 ###Frontend Setup
 1. Navigate to frontend folder
  ```bash
 cd ../frontend
-
 ```
 2. Install frontend dependencies
  ```bash
