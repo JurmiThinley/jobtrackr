@@ -5,11 +5,11 @@ Track your job applications, update statuses, and manage applications efficientl
 
 ## Features
 
-- User signup and login (to be implemented)
-- Add, view, update, and delete job applications (planned)
+- User signup and login 
+- Add, view, update, and delete job applications
 - RESTful API built with Flask and SQLAlchemy
 - Modular code structure with blueprints
-- Ready for CLI and web frontend integration
+- Ready for CLI and web frontend integration (to be completed)
 
 ## Getting Started
 
